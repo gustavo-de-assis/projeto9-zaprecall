@@ -1,15 +1,19 @@
 import styled from "styled-components"
-import Pergunta from "./Pergunta"
+import FlashCard from "./FlashCard"
+import CardPergunta from "./CardPergunta"
 
 
 export default function Corpo(){
     return (
         <Deck>
-            <Pergunta></Pergunta>
-            <Pergunta></Pergunta>
-            <Pergunta></Pergunta>
-            <Pergunta></Pergunta>
-            <Pergunta></Pergunta>
+            <CardPergunta></CardPergunta>
+            <FlashCard></FlashCard>
+            <FlashCard></FlashCard>
+            <FlashCard></FlashCard>
+            <FlashCard></FlashCard>
+            <FlashCard></FlashCard>
+            <FlashCard></FlashCard>
+            <FlashCard></FlashCard>
         </Deck>
     )
 }

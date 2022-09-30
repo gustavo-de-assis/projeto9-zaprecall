@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-export default function Pergunta(){
+export default function FlashCard(){
     return(
-        <ItemPergunta/>
+        <ItemFlashCard/>
     )
 }
 
-const ItemPergunta = styled.li`
+const ItemFlashCard = styled.li`
     width: 300px;
     height: 35px;
     background-color: #FFFFFF;
