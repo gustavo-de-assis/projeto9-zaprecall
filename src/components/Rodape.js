@@ -1,11 +1,9 @@
 import styled from "styled-components";
-import Botoes from "./Botoes";
 
 export default function Rodape(){
     return(
         <Footer>
-            <Botoes/>
-            <h1>Oi</h1>
+            <h1>Qtd de Acertos: </h1>
         </Footer>
     )
 }

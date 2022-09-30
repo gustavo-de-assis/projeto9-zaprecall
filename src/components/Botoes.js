@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+const VERDE = '#119811';
+const VERMELHO = '#bb0000';
+const AMARELO = '#ddc500';
 
 export default function Botoes(){
     return(
@@ -12,8 +15,8 @@ export default function Botoes(){
 }
 
 const ContainerBotoes = styled.div`
-    display: flex;
-    width: 80%;
+    display: flex; //none, se pergunta, flex se resposta;
+    width: 90%;
     justify-content: space-between;
     margin: 20px;
     button {
@@ -21,16 +24,17 @@ const ContainerBotoes = styled.div`
         font-family: 'Recursive';
         font-style: normal;
         font-weight: 400;
-        font-size: 12px;
+        font-size: 10px;
         line-height: 14px;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         color: #FFFFFF;
-        background: blue;
+        background: ${VERDE};//blue;
         border-radius: 5px;
-        border: 1px solid blue;
+        border: 2px solid black;
         padding:5px;
+        margin: 0 5px;
     }  
 `

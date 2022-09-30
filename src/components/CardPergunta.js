@@ -4,6 +4,7 @@ import Botoes from "./Botoes"
 export default function CardPergunta(){
     return ( 
         <ItemPergunta>
+            <p> the book is on the table?</p>
             <Botoes></Botoes>
         </ItemPergunta>
     );
@@ -27,7 +28,8 @@ const ItemPergunta = styled.div`
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-around;
     img{
         position: absolute;
         bottom: 10px;
