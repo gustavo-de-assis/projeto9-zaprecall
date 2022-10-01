@@ -2,13 +2,13 @@ import styled from "styled-components";
 import Corpo from "./Corpo";
 import Rodape from "./Rodape";
 import Topo from "./Topo";
-
+import decks from "../assets/decks"
 
 export default function Main(){
     return(
         <Container>
             <Topo/>
-            <Corpo/>
+            <Corpo decks = {decks}/>
             <Rodape/>
         </Container>
     );

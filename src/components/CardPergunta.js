@@ -1,11 +1,24 @@
+import { useState } from "react";
 import styled from "styled-components";
 import Botoes from "./Botoes"
 
-export default function CardPergunta(){
+export default function CardPergunta({card}){
+    const[estadoCard, setEstadoCard] = useState("pergunta");
+    
+    
+
+    function mostraResposta(){
+        setEstadoCard("resposta");
+    }
+
+    
     return ( 
         <ItemPergunta>
-            <p> the book is on the table?</p>
-            <Botoes></Botoes>
+            <p onClick={()=>mostraResposta()}>{estadoCard === "pergunta"? card.pergunta : card.resposta}</p>
+            <img src="../assets/img/seta_virar.png" alt = ""/>
+            {estadoCard === "resposta" &&(
+                <Botoes/>
+            )}
         </ItemPergunta>
     );
 
@@ -31,8 +44,13 @@ const ItemPergunta = styled.div`
     align-items: center;
     justify-content: space-around;
     img{
+        width: 10px;
+        height: 10px;
         position: absolute;
         bottom: 10px;
         right: 10px;
+    }
+    p{
+        text-align: center;
     }
 `
