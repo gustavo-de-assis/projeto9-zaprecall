@@ -5,11 +5,12 @@ const VERMELHO = '#bb0000';
 const AMARELO = '#ddc500';
 
 export default function Botoes(){
+    
     return(
         <ContainerBotoes>
-            <button>Não Lembrei</button>
-            <button>Quase não lembrei</button>
-            <button>Zap!</button>
+            <button >Não Lembrei</button>
+            <button >Quase não lembrei</button>
+            <button >Zap!</button>
         </ContainerBotoes>
     );
 }

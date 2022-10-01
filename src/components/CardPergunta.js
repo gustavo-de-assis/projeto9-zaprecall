@@ -4,14 +4,11 @@ import Botoes from "./Botoes"
 
 export default function CardPergunta({card}){
     const[estadoCard, setEstadoCard] = useState("pergunta");
-    
-    
 
     function mostraResposta(){
         setEstadoCard("resposta");
     }
 
-    
     return ( 
         <ItemPergunta>
             <p onClick={()=>mostraResposta()}>{estadoCard === "pergunta"? card.pergunta : card.resposta}</p>

@@ -1,8 +1,12 @@
+import { useState } from "react";
 import styled from "styled-components";
 
-export default function FlashCard(){
+export default function FlashCard({card, cardVisualizado}){
+    
     return(
-        <ItemFlashCard/>
+        <ItemFlashCard>
+            <p onClick={()=>cardVisualizado(card)}>Pergunta {card.id}</p>
+        </ItemFlashCard>
     )
 }
 
