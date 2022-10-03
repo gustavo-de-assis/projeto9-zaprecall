@@ -2,11 +2,11 @@ import { useState } from "react";
 import styled from "styled-components";
 import Botoes from "./Botoes"
 
-export default function CardPergunta({card}){
+export default function CardPergunta({card, acertos, atualizaAcertos}){
     const[estadoCard, setEstadoCard] = useState("pergunta");
 
     function mostraResposta(){
-        setEstadoCard("resposta");
+        estadoCard === "pergunta" ? setEstadoCard("resposta") : setEstadoCard("pergunta");
     }
 
     return ( 
@@ -14,7 +14,7 @@ export default function CardPergunta({card}){
             <p onClick={()=>mostraResposta()}>{estadoCard === "pergunta"? card.pergunta : card.resposta}</p>
             <img src="../assets/img/seta_virar.png" alt = ""/>
             {estadoCard === "resposta" &&(
-                <Botoes/>
+                <Botoes card={card} acertos={acertos} mostraResposta={mostraResposta} atualizaAcertos={atualizaAcertos}/>
             )}
         </ItemPergunta>
     );

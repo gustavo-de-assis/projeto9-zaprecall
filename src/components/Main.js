@@ -3,13 +3,24 @@ import Corpo from "./Corpo";
 import Rodape from "./Rodape";
 import Topo from "./Topo";
 import decks from "../assets/decks"
+import { useState } from "react";
 
 export default function Main(){
+    const [acertos, setAcertos] = useState(0);
+    const [ativo, setAtivo] = useState(false)
+
+    function atualizaAcertos(card){
+            setAcertos(acertos +1);
+            setAtivo(true);
+            card.ativo = ativo;
+    }
+
+
     return(
         <Container>
             <Topo/>
-            <Corpo decks = {decks}/>
-            <Rodape/>
+            <Corpo decks = {decks} acertos={acertos} atualizaAcertos={atualizaAcertos}/>
+            <Rodape acertos={acertos}/>
         </Container>
     );
 }

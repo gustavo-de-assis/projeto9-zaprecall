@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export default function Rodape(){
+export default function Rodape({acertos}){
     return(
         <Footer>
-            <h1>Qtd de Acertos: </h1>
+            <h1>Qtd de Acertos: {acertos}</h1>
         </Footer>
     )
 }

@@ -4,13 +4,13 @@ const VERDE = '#119811';
 const VERMELHO = '#bb0000';
 const AMARELO = '#ddc500';
 
-export default function Botoes(){
+export default function Botoes({card, acertos, atualizaAcertos, mostraResposta}){
     
     return(
         <ContainerBotoes>
-            <button >Não Lembrei</button>
-            <button >Quase não lembrei</button>
-            <button >Zap!</button>
+            <button style={{background:VERMELHO}}>Não Lembrei</button>
+            <button style={{background: AMARELO}}>Quase não lembrei</button>
+            <button style={{background:VERDE}} onClick={()=>atualizaAcertos(card) && mostraResposta() }>Zap!</button>
         </ContainerBotoes>
     );
 }
@@ -24,18 +24,22 @@ const ContainerBotoes = styled.div`
         width: 90px;
         font-family: 'Recursive';
         font-style: normal;
-        font-weight: 400;
-        font-size: 10px;
+        font-weight: 500;
+        font-size: 12px;
         line-height: 14px;
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         color: #FFFFFF;
-        background: ${VERDE};//blue;
+/*         background: blue;*/
         border-radius: 5px;
         border: 2px solid black;
         padding:5px;
         margin: 0 5px;
-    }  
+        cursor: pointer;
+    } 
+    & button:hover{
+        opacity: 0.8;
+    }
 `

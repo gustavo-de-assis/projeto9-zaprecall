@@ -4,7 +4,7 @@ import CardPergunta from "./CardPergunta"
 import { useState } from "react";
 
 
-export default function Corpo({decks}){
+export default function Corpo({decks, acertos, atualizaAcertos}){
     const {id, ativo, pergunta, resposta} = decks;
     const[visualizadas, setVisualizadas] = useState([]);
 
@@ -18,7 +18,7 @@ export default function Corpo({decks}){
     return (
         <Deck>
             {decks.map((card)=>(visualizadas.includes(card.id) ? 
-            <CardPergunta card={card}/> 
+            <CardPergunta card={card} acertos={acertos} atualizaAcertos={atualizaAcertos}/> 
             : 
             <FlashCard card={card} cardVisualizado={cardVisualizado}/>))}
             
