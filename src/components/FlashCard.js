@@ -1,11 +1,13 @@
 import { useState } from "react";
 import styled from "styled-components";
+import play from "../assets/img/seta_play.png"
 
 export default function FlashCard({card, cardVisualizado}){
     
     return(
         <ItemFlashCard>
-            <p onClick={()=>cardVisualizado(card)}>Pergunta {card.id}</p>
+            <p>Pergunta {card.id}</p>
+            <img src={play} alt="" onClick={()=>cardVisualizado(card)}/>
         </ItemFlashCard>
     )
 }
@@ -28,5 +30,8 @@ const ItemFlashCard = styled.li`
         font-size: 16px;
         line-height: 19px;
         color: #333333;
+    }
+    img:hover{
+        cursor: pointer;
     }
 `

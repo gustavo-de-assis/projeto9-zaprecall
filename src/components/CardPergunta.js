@@ -1,6 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Botoes from "./Botoes"
+import seta from "../assets/img/seta_virar.png"
+
 
 export default function CardPergunta({card, acertos, atualizaAcertos}){
     const[estadoCard, setEstadoCard] = useState("pergunta");
@@ -12,7 +14,7 @@ export default function CardPergunta({card, acertos, atualizaAcertos}){
     return ( 
         <ItemPergunta>
             <p onClick={()=>mostraResposta()}>{estadoCard === "pergunta"? card.pergunta : card.resposta}</p>
-            <img src="../assets/img/seta_virar.png" alt = ""/>
+            <img src={seta} alt = ""/>
             {estadoCard === "resposta" &&(
                 <Botoes card={card} acertos={acertos} mostraResposta={mostraResposta} atualizaAcertos={atualizaAcertos}/>
             )}
